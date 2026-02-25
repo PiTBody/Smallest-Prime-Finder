@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 static Logger LOGGER = Logger.getLogger("Main");
 
 void main() {
-    int threadNumber = Integer.parseInt(IO.readln("How many threads do you want to use? \n"));
+    int threadNumber = Integer.parseInt(IO.readln("How many threads do you want to use? "));
     FastSmallestChecker fastSmallestChecker = new FastSmallestChecker();
     Thread[] threads = new Thread[threadNumber];
     for (int i = 0; i < threadNumber; i++) {
