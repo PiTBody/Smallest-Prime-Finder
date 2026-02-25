@@ -1,14 +1,14 @@
-import com.papenko.FastSmallestChecker;
-import com.papenko.FastSmallestFinder;
+import src.FastSmallestChecker;
+import src.FastSmallestFinder;
 
+import java.io.IO;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 static Logger LOGGER = Logger.getLogger("Main");
 
 void main() {
-    IO.println("How many threads do you want to use?");
-    int threadNumber = Integer.parseInt(IO.readln());
+    int threadNumber = Integer.parseInt(IO.readln("How many threads do you want to use? \n"));
     FastSmallestChecker fastSmallestChecker = new FastSmallestChecker();
     Thread[] threads = new Thread[threadNumber];
     for (int i = 0; i < threadNumber; i++) {

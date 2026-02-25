@@ -1,4 +1,4 @@
-package com.papenko;
+package src;
 
 import lombok.EqualsAndHashCode;
 import lombok.Value;
@@ -12,7 +12,7 @@ public class FastSmallestFinder extends Thread {
     int start;
     int threads;
     FastSmallestChecker fastSmallestChecker;
-    static Logger LOGGER = Logger.getLogger("com.papenko.FastSmallestFinder");
+    static Logger LOGGER = Logger.getLogger("src.FastSmallestFinder");
 
     @Override
     public void run() {
