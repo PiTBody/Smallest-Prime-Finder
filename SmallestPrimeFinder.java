@@ -26,7 +26,7 @@ public class SmallestPrimeFinder {
 
     public static void main(String... args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("How many CPU cores do you want to use?");
+        System.out.println("How many CPU threads do you want to use?");
         int cores = sc.nextInt();
         FastSmallestChecker fastSmallestChecker = new FastSmallestChecker();
         Thread[] threads = new Thread[cores];
@@ -52,3 +52,4 @@ public class SmallestPrimeFinder {
         sc.close();
     }
 }
+
