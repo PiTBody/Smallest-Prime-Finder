@@ -31,8 +31,8 @@ public class FastSmallestChecker {
         Instant time1 = Instant.now();
         LOGGER.info("Started with number: " + start);
         for (; start <= finish; start += cores) {
-            if (start % (finish * 0.001) == 0) {
-                LOGGER.info((100.0 * start) / finish + "% Done.");
+            if (start % (finish * 0.01) == 0) {
+                LOGGER.info(100 * start / finish + "% Done.");
             }
             if ((start + mod) % 3 != 0) {
                 BigInteger N = new BigInteger(start + end);
