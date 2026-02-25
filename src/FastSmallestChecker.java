@@ -61,3 +61,4 @@ public class FastSmallestChecker {
         Files.write(file, lines, UTF_8);
     }
 }
+
