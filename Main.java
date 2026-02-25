@@ -26,7 +26,7 @@ void main() {
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, e, e::getMessage);
         }
-        IO.println("Finished one of the threads.");
+        IO.println("One of the threads finished.");
     }
 }
 
