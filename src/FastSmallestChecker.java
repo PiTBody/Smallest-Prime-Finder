@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Value
 public class FastSmallestChecker {
     List<Integer> primeStarters = Collections.synchronizedList(new ArrayList<>());
-    static int len = 11111;
+    static int len = 1234;
     static int mod = len % 3;
     static String end = "1".repeat(len);
     static int finish = 100000;
@@ -31,7 +31,7 @@ public class FastSmallestChecker {
         Instant time1 = Instant.now();
         LOGGER.info("Started with number: " + start);
         for (; start <= finish; start += cores) {
-            if (start % (finish * 0.01) == 0) {
+            if (start % (finish * 0.001) == 0) {
                 LOGGER.info((100.0 * start) / finish + "% Done.");
             }
             if ((start + mod) % 3 != 0) {
