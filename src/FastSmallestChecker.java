@@ -1,4 +1,4 @@
-package com.papenko;
+package src;
 
 import lombok.Value;
 
@@ -61,3 +61,4 @@ public class FastSmallestChecker {
         Files.write(file, lines, UTF_8);
     }
 }
+
