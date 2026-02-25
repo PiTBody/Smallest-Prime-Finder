@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Value
 public class FastSmallestChecker {
     List<Integer> primeStarters = Collections.synchronizedList(new ArrayList<>());
-    static int len = 1234;
+    static int len = 11111;
     static int mod = len % 3;
     static String end = "1".repeat(len);
     static int finish = 100000;
