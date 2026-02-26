@@ -35,10 +35,10 @@ public class FastSmallestChecker {
         FastSmallestChecker.len = len;
     }
 
-    public void check(int start, int cores) {
+    public void check(int start, int threads) {
         Instant time1 = Instant.now();
         LOGGER.info("Started with number: " + start);
-        for (; start <= finish; start += cores) {
+        for (; start <= finish; start += threads) {
             if (start % (finish * 0.01) == 0) {
                 LOGGER.info(100 * start / finish + "% Done.");
             }
