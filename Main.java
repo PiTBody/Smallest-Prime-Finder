@@ -12,9 +12,7 @@ void main() {
     int lenNumber = Integer.parseInt(IO.readln("How many repunits at the end do you want to have? "));
     int finishNumber = Integer.parseInt(IO.readln("How many numbers do you want to check? "));
     Thread[] threads = new Thread[threadNumber];
-    FastSmallestChecker fastSmallestChecker = new FastSmallestChecker();
-    fastSmallestChecker.setLen(lenNumber);
-    fastSmallestChecker.setFinish(finishNumber);
+    FastSmallestChecker fastSmallestChecker = new FastSmallestChecker(finishNumber, lenNumber);
     for (int i = 0; i < threadNumber; i++) {
         threads[i] = new FastSmallestFinder(i, threadNumber, fastSmallestChecker);
         threads[i].start();

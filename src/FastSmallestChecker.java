@@ -21,18 +21,17 @@ import java.util.stream.Collectors;
 @Value
 public class FastSmallestChecker {
     List<Integer> primeStarters = Collections.synchronizedList(new ArrayList<>());
-    static int finish;
-    static int len;
-    static int mod = len % 3;
-    static String end = "1".repeat(len);
+    int finish;
+    int len;
+    int mod;
+    String end;
     static Logger LOGGER = Logger.getLogger("src.FastSmallestChecker");
 
-    public void setFinish(int finish) {
-        FastSmallestChecker.finish = finish;
-    }
-
-    public void setLen(int len) {
-        FastSmallestChecker.len = len;
+    public FastSmallestChecker(int len, int finish) {
+        this.len = len;
+        this.finish = finish;
+        mod = this.len % 3;
+        end = "1".repeat(this.len);
     }
 
     public void check(int start, int cores) {
