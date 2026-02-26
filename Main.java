@@ -23,11 +23,11 @@ void main() {
         } catch (InterruptedException e) {
             LOGGER.log(Level.SEVERE, e, e::getMessage);
         }
-        try {
-            fastSmallestChecker.writePrimesToFile(lenNumber);
-        } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, e, e::getMessage);
-        }
+    }
+    try {
+        fastSmallestChecker.writePrimesToFile(lenNumber);
+    } catch (IOException e) {
+        LOGGER.log(Level.SEVERE, e, e::getMessage);
     }
     IO.println("Finished all threads.");
     Instant time2 = Instant.now();
