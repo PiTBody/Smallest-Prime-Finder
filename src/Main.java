@@ -3,7 +3,7 @@ import src.FastSmallestChecker;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-static Logger LOGGER = Logger.getLogger("Main");
+static Logger LOGGER = Logger.getLogger("src.Main");
 
 void main() {
     int threadNumber = Integer.parseInt(IO.readln("How many threads do you want to use? "));

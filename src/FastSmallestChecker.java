@@ -1,7 +1,5 @@
 package src;
 
-import lombok.Value;
-
 import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.file.Files;
@@ -10,15 +8,12 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-@Value
 public class FastSmallestChecker {
     List<Integer> primeStarters = Collections.synchronizedList(new ArrayList<>());
-    static Logger LOGGER = Logger.getLogger("src.FastSmallestChecker");
 
     public void check(int start, int finish, int len, int threads) {
         int mod = len % 3;
